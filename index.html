@@ -9,15 +9,15 @@
 	<body>
 		
 		<script>
-			let arr = [1 , 2 , 3 , 4 , 5 , 4 , 3 , 2 , 1 ];
+			let arr = [1,2,3,4,5,4,3,2,1];
 		
 			for(let i = 0 ; i < arr.length ; i++){
 				let rows =" ";
 				
-				for(let j = 1 ; j <= arr[j]; j++ ){
-					rows = rows + arr[i] + " ";
+				for(let j = 1 ; j <= arr[i]; j++ ){
+					rows += arr[i] + " ";
 				}
-				document.write(rows + "<br>");
+				document.write(" ".repeat(5 - arr[i]) + rows + "<br>");
 			}
 			
 		</script>
