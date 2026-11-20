@@ -13,17 +13,18 @@
 			var str = " ";
 			
 			for (var a = 1 ; a <= 5 ; a++){
-				str += "".repeat(5-a);
+				str += " ".repeat(5-a);
 				str += (a + " ").repeat(a);
 				str += "\n";
 			}
 			
-			for(var a = 4 ; a <= 1; a--){
+			for(var a = 4 ; a >= 1; a--){
 				
-				str += "".repeat(5-a);
+				str += " ".repeat(5-a);
 				str += (a + " ").repeat(a);
 				str += "\n";
 			}
+			document.getElementById('pattern').innerHTML = str;
 		</script>
 	</body>
 </html>
