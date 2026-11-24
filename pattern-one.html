@@ -21,6 +21,7 @@
 			}
 			document.write('<br><br>');
 			
+			
 			//pattern two
 			
 			for(var i = 8 ; i >= 1 ; i--){
@@ -33,7 +34,49 @@
 			}
 			document.write('<br><br>');
 			
-	
+			
+			//pattern three 
+			var str = "";
+			for (var i = 1; i <= 6; i++) {
+				for (var j = 1; j <= 11; j++) {
+					str += "* ";
+				}
+
+				document.write(str + "<br>");
+				str = "";
+			}
+			document.write("<br><br>");
+			
+			
+			//pattern four 
+			
+			for (var i = 1; i <= 6; i++) {
+				str = "  ".repeat(6 - i);
+
+				for (var j = 1; j <= i; j++) {
+					str += "* ";
+				}
+				document.write("<pre>" + str + "</pre>");
+			}
+			document.write("<br><br>");
+			
+			
+			//pattern five
+			var str = "";
+			for(var i = 1 ; i <= 7 ;i++){
+			
+				str += " ".repeat(7 - i);
+				
+				for(var j = 1 ; j <= i ; j++){
+					str += "* ";
+				}
+				str += "\n";
+			}
+			document.write("<pre>" + str + "</pre>");
+			
+			
+			//pattern six 
+			
 		</script>
 	</body>
 </html>
