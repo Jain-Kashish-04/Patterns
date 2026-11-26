@@ -2,125 +2,134 @@
 <html>
 	<head>
 		<title>
-			All patterns 
+			All patterns of stars
 		</title>
 	</head>
 
-	<body id="output">
+	<body id="result">
 	
 		<script>
-			var space = String.fromCharCode(160);
-			var nextline = String.fromCharCode(10);
-			var output= "";
+			var space = String.fromCharCode(160);  //non-breaking space
+			var nextline = String.fromCharCode(10); //new line 
+			var result= "";
 			
 			
 			function patterns(str){
-				output += str.replace(/ /g,space) + nextline;
+				result += str.replace(/ /g,space) + nextline;
 			}
 			
 			//Pattern one
 			var str = "";
 			
 			for(var i= 1; i <= 8 ; i++){
-				str = " ".repeat(8 - i);
+				str = "";
 				
 				for(var j = 1; j <= i ; j++){
 					str += "* ";
 				}
-				document.write(str + "<br>");
+				patterns(str);
 			}
-		
-		
+			patterns("");
+			patterns("");
 
 			//pattern two
 			
 			for(var i = 8 ; i >= 1 ; i--){
-				str = " ".repeat(8 - i);
+				str = "";
 				
 				for(var j = 1 ; j <= i ; j++){
 					str += "* ";
 				}
-				document.write(str + "<br>");
+				patterns(str);
 			}
+			patterns("");
+			patterns("");
 			
 			
 			//pattern three 
-			var str = "";
+			str = "";
+			
 			for (var i = 1; i <= 6; i++) {
 				for (var j = 1; j <= 11; j++) {
 					str += "* ";
 				}
 
-				document.write(str + "<br>");
+				patterns(str);
 				str = "";
 			}
-		
-			
-				
-		//pattern four
-		var str = "";
-		for (var i = 1; i <= 6; i++) {
-			str = "   ".repeat(6 - i);
-
-			for (var j = 1; j <= i; j++) {
-				str += "* ";
-			}
-
-			document.write(str.replace(/ /g, space) + "<br><br>");
-		}
-		
-		// Pattern five
-
-		var str = "";
-
-		for (var i = 1; i <= 7; i++) {
-			str += "  ".repeat(7 - i);
-
-			for (var j = 1; j <= i; j++) {
-				str += " * ";
-			}
-
-			str += "<br>";
-		}
-
-		document.write( str.replace(/ /g, space) );
-		
-		
-
-		// Pattern six
-
-		var str = "";
-
-		for (var i = 1; i <= 7; i++) {
-			str += "  ".repeat(i - 1);
-
-			for (var j = 1; j <= 8 - i; j++) {
-				str += " * ";
-			}
-
-			str += "<br>";
-		}
-
-		document.write(str.replace(/ /g, space));
-	
-
-		// Pattern seven
-
-		var str = "";
-
-		for (var i = 1; i <= 8; i++) {
-			str += "   ".repeat(i - 1);
-
-			for (var j = 1; j <= 9 - i; j++) {
-				str += "* ";
-			}
-
-			str += "<br>";
-		}
-
-		document.write( str.replace(/ /g, space) );
-		
+			patterns("");
+			patterns("");
 					
+			//pattern four
+			str = "";
+			
+			for (var i = 1; i <= 6; i++) {
+				str = "   ".repeat(6 - i);
+
+				for (var j = 1; j <= i; j++) {
+					str += "* ";
+				}
+				patterns(str);
+			}
+			patterns("");
+			patterns("");
+			
+			// Pattern five
+
+			for (var i = 1; i <= 7; i++) {
+				str = "  ".repeat(7 - i);
+
+				for (var j = 1; j <= i; j++) {
+					str += " * ";
+				}
+				patterns(str);
+			}
+			patterns("");
+			patterns("");
+
+			// Pattern six
+
+			for (var i = 1; i <= 7; i++) {
+				str = "  ".repeat(i - 1);
+
+				for (var j = 1; j <= 8 - i; j++) {
+					str += " * ";
+				}
+				patterns(str);
+			}
+			patterns("");
+			patterns("");
+
+			// Pattern seven
+
+			for (var i = 1; i <= 8; i++) {
+				str = "   ".repeat(i - 1);
+
+				for (var j = 1; j <= 9 - i; j++) {
+					str += "* ";
+				}
+				patterns(str);
+			}
+			patterns("");
+			patterns("");
+			
+			//pattern eight
+			
+			for(var i = 1; i <= 8 ; i++){
+				str = "";
+				
+				for(var j = 1; j <= 8-i ; j++){
+					str += " ";
+				}
+				
+				for(var k = 1 ; k <= 2 * i -1 ; k++){
+					str += "* ";
+				}
+				patterns(str);
+			}
+			
+			
+		document.getElementById('result').innerText = result;
 		</script>
 	</body>
 </html>
