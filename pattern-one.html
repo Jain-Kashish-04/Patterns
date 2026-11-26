@@ -6,8 +6,18 @@
 		</title>
 	</head>
 
-	<body>
+	<body id="output">
+	
 		<script>
+			var space = String.fromCharCode(160);
+			var nextline = String.fromCharCode(10);
+			var output= "";
+			
+			
+			function patterns(str){
+				output += str.replace(/ /g,space) + nextline;
+			}
+			
 			//Pattern one
 			var str = "";
 			
@@ -19,9 +29,8 @@
 				}
 				document.write(str + "<br>");
 			}
-			document.write('<br><br>');
-			
-			document.write('<hr>');
+		
+		
 
 			//pattern two
 			
@@ -33,8 +42,7 @@
 				}
 				document.write(str + "<br>");
 			}
-			document.write('<br><br>');
-			document.write('<hr>');
+			
 			
 			//pattern three 
 			var str = "";
@@ -46,70 +54,73 @@
 				document.write(str + "<br>");
 				str = "";
 			}
-			document.write("<br><br>");
-			document.write('<hr>');
+		
 			
-			//pattern four 
-			
-			for (var i = 1; i <= 6; i++) {
-				str = "  ".repeat(6 - i);
-
-				for (var j = 1; j <= i; j++) {
-					str += "* ";
-				}
-				document.write("<pre>" + str + "</pre>");
-			}
-			document.write("<br><br>");
-			document.write('<hr>');
-			
-			//pattern five
-			var str = "";
-			for(var i = 1 ; i <= 7 ;i++){
-			
-				str += " ".repeat(7 - i);
 				
-				for(var j = 1 ; j <= i ; j++){
-					str += "* ";
-				}
-				str += "\n";
-			}
-			document.write("<pre>" + str + "</pre>");
-			document.write("<br><br>");
-			document.write('<hr>');
-			
-			//pattern six 
-						
-			var str = "";
-			for(var i = 1; i <= 7; i++){
+		//pattern four
+		var str = "";
+		for (var i = 1; i <= 6; i++) {
+			str = "   ".repeat(6 - i);
 
-				str += " ".repeat(i - 1);
-
-				for(var j = 1; j <= 7 - i + 1; j++){
-					str += "* ";
-				}
-				str += "\n";
+			for (var j = 1; j <= i; j++) {
+				str += "* ";
 			}
 
-			document.write("<pre>" + str + "</pre>");
-			document.write("<br><br>");
-			document.write('<hr>');
-			
-			//pattern seven 
-			
-			var str = "";
-			
-			for(var i = 1; i <= 8 ; i++){
-				str += " ".repeat((i - 1) * 2);
-			
-				for(var j = 1; j <= 9- i ; j++){
-					str += "* ";
-				}
-				str += "\n";
+			document.write(str.replace(/ /g, space) + "<br><br>");
+		}
+		
+		// Pattern five
+
+		var str = "";
+
+		for (var i = 1; i <= 7; i++) {
+			str += "  ".repeat(7 - i);
+
+			for (var j = 1; j <= i; j++) {
+				str += " * ";
 			}
-			document.write("<pre>"  + str + "</pre>");
-			document.write('<hr>');
-			
-			
+
+			str += "<br>";
+		}
+
+		document.write( str.replace(/ /g, space) );
+		
+		
+
+		// Pattern six
+
+		var str = "";
+
+		for (var i = 1; i <= 7; i++) {
+			str += "  ".repeat(i - 1);
+
+			for (var j = 1; j <= 8 - i; j++) {
+				str += " * ";
+			}
+
+			str += "<br>";
+		}
+
+		document.write(str.replace(/ /g, space));
+	
+
+		// Pattern seven
+
+		var str = "";
+
+		for (var i = 1; i <= 8; i++) {
+			str += "   ".repeat(i - 1);
+
+			for (var j = 1; j <= 9 - i; j++) {
+				str += "* ";
+			}
+
+			str += "<br>";
+		}
+
+		document.write( str.replace(/ /g, space) );
+		
+					
 		</script>
 	</body>
 </html>
